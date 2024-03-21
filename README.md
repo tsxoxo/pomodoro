@@ -1,19 +1,18 @@
-# Timer
+# Pomodoro
 
-_4th task of the [7 GUIs](https://eugenkiss.github.io/7guis)._
+## Ideas for features
+### Core
+* plays a sound on completion and possibly in the middle of the set (even when screen is off)
+* Progress clearly visible
+* works offline
 
-Made with [Vue](https://vuejs.org/) and [Xstate](https://stately.ai/docs) -- a framework for using finite state machines (FSM).
+### More  
+* different themes -- smth round, something vertical, sand clock, smth black and white, smth 80s, smth future UI
+* progressive web application -- works offline, shows push notifications for progress and when it's done
+* animated progress and page transitions
+* options -- length of set, pause, possibly sound effect, auto-start, turn off animations
+* each theme as well as the options page gets its own route.
+* possibly move between pages by swiping
 
----
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/tsxoxo/7GUIs-Xstate-Vue--4.Timer)
-
----
-
-## Similar examples
-These are all official [Xstate examples](https://github.com/statelyai/xstate/tree/main/examples) -- a highly recommended resource.
-
-They don't use Vue but were helpful for figuring out the logic and syntax -- things like actor invocation and eventless (always) transitions (and when and where to use them). 
-* [Stopwatch](https://github.com/statelyai/xstate/blob/main/examples/stopwatch/src/stopwatchMachine.ts)
-* [Timer](https://github.com/statelyai/xstate/blob/main/examples/timer/src/timerMachine.ts)
-* [Filling water](https://github.com/statelyai/xstate/blob/main/examples/workflow-filling-water/main.ts)
+## More info 
+See the [template](https://github.com/tsxoxo/7GUIs-Xstate-Vue--4.Timer) for this project.
