@@ -25,7 +25,6 @@ const progressBarStyle = computed(() => {
   }
 })
 
-// , linear-gradient(var(--display - text), var(--display - text))
 </script>
 
 <template>
@@ -37,7 +36,7 @@ const progressBarStyle = computed(() => {
     </div>
     <div id="display" class="center-children">
       <p class="display-number">{{ snapshot.context.elapsed }}</p>
-      <div id="display-progress" style="{backgroundImage: 'linearGradient(to right, red 0%, blue 50%)'}" />
+      <div id="display-progress" />
       <p class="display-number">{{ snapshot.context.duration }} </p>
     </div>
     <div id="slider-wrapper" class="center-children">
@@ -56,7 +55,7 @@ const progressBarStyle = computed(() => {
   font-family: 'Rationale';
   font-style: normal;
   font-weight: 400;
-  src: local("Rationale"), url("../public/rationale.ttf") format('truetype');
+  src: local("Rationale"), url("/rationale.ttf") format('truetype');
 }
 
 :root {
