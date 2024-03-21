@@ -16,15 +16,23 @@ const progressPercentage = computed(() => {
   return Number(snapshot.value.context.elapsed / snapshot.value.context.duration * 100).toFixed(2).toString()
 })
 
+const progressBackdrop = "repeating-linear-gradient(to right, var(--display-text), var(--display-text) 5%, transparent 5%, transparent 10%)"
+// Markers for 0%, 25%, 50%, 75%, 100% progress
+const progressMarker = "linear-gradient(var(--display-text), var(--display-text))"
+
 const progressBarStyle = computed(() => {
+  const progressBar = `linear-gradient(to right, var(--display-text) ${progressPercentage.value}%, transparent ${progressPercentage.value}%)`
+
   return {
-    backgroundImage: `linear-gradient(to right, var(--display-text) ${progressPercentage.value}%, transparent ${progressPercentage.value}%), repeating-linear-gradient(to right, var(--display-text), var(--display-text) 1%, transparent 1%, transparent 2%), linear-gradient(var(--display-text), var(--display-text)), linear-gradient(var(--display-text), var(--display-text)), linear-gradient(var(--display-text), var(--display-text)), linear-gradient(var(--display-text), var(--display-text)), linear-gradient(var(--display-text), var(--display-text))`,
-    backgroundSize: `100%, 5% 4px, 4px 100%, 4px 60%, 4px 60%, 4px 30%, 4px 30%`,
-    backgroundRepeat: `no-repeat, space no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat`,
-    backgroundPosition: `0% center, 0% center, center, 25%, 75%, 0%, 100%`
+    backgroundImage: `${progressBar}, ${progressBackdrop}, ${progressMarker}, ${progressMarker}, ${progressMarker}, ${progressMarker}, ${progressMarker}`,
+
+    backgroundSize: `100%, 5% 4px, 4px 30%, 4px 60%, 4px 100%, 4px 60%, 4px 30%`,
+
+    backgroundRepeat: `no-repeat, repeat no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat`,
+
+    backgroundPosition: `0% center, 0% center,   0%, 25%, 50%, 75%, 100%`
   }
 })
-
 </script>
 
 <template>
