@@ -5,6 +5,7 @@
 * plays a sound on completion and possibly in the middle of the set (even when screen is off)
 * Progress clearly visible
 * works offline
+* Persistent storage: how many pomodoros have been done.
 
 ### More  
 * different themes -- smth round, something vertical, sand clock, smth black and white, smth 80s, smth future UI
